@@ -22,8 +22,8 @@ import org.springframework.messaging.support.GenericMessage;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
-import telran.logs.bugs.dto.LogDto;
-import telran.logs.bugs.dto.LogType;
+import telran.logs.bugs.dto.log.LogDto;
+import telran.logs.bugs.dto.enums.LogType;
 
 @SpringBootTest
 @Import(TestChannelBinderConfiguration.class)

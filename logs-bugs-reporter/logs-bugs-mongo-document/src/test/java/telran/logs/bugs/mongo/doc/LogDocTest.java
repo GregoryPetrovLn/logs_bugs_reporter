@@ -13,8 +13,8 @@ import org.springframework.boot.test.autoconfigure.data.mongo.AutoConfigureDataM
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import telran.logs.bugs.dto.LogDto;
-import telran.logs.bugs.dto.LogType;
+import telran.logs.bugs.dto.log.LogDto;
+import telran.logs.bugs.dto.enums.LogType;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes=LogsRepo.class)

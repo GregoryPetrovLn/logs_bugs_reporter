@@ -24,12 +24,11 @@ import org.springframework.messaging.support.GenericMessage;
 import com.icegreen.greenmail.configuration.GreenMailConfiguration;
 import com.icegreen.greenmail.junit5.GreenMailExtension;
 import com.icegreen.greenmail.util.GreenMailUtil;
-import com.icegreen.greenmail.util.ServerSetup;
 import com.icegreen.greenmail.util.ServerSetupTest;
 
 import telran.logs.bugs.client.EmailProviderClient;
-import telran.logs.bugs.dto.LogDto;
-import telran.logs.bugs.dto.LogType;
+import telran.logs.bugs.dto.log.LogDto;
+import telran.logs.bugs.dto.enums.LogType;
 
 @SpringBootTest
 @Import({TestChannelBinderConfiguration.class, MailSenderValidatorAutoConfiguration.class})

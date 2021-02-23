@@ -18,8 +18,9 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import telran.logs.bugs.dto.enums.LogType;
+import telran.logs.bugs.dto.log.LogDto;
 import telran.logs.bugs.random.RandomLogs;
-import telran.logs.bugs.dto.*;
 
 @ExtendWith(SpringExtension.class)
 @EnableAutoConfiguration

@@ -6,8 +6,8 @@ import java.util.concurrent.ThreadLocalRandom;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import telran.logs.bugs.dto.LogDto;
-import telran.logs.bugs.dto.LogType;
+import telran.logs.bugs.dto.log.LogDto;
+import telran.logs.bugs.dto.enums.LogType;
 
 @Component
 public class RandomLogs {

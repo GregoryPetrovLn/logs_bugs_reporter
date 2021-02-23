@@ -12,7 +12,7 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 
 import telran.logs.bugs.client.EmailProviderClient;
-import telran.logs.bugs.dto.LogDto;
+import telran.logs.bugs.dto.log.LogDto;
 
 @SpringBootApplication
 public class EmailNotifierAppl {
