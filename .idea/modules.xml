@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/logs-bugs-reporter/log-bugs-dto/log-bugs-dto.iml" filepath="$PROJECT_DIR$/logs-bugs-reporter/log-bugs-dto/log-bugs-dto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logs-bugs-reporter/logs-analyzer/logs-analyzer.iml" filepath="$PROJECT_DIR$/logs-bugs-reporter/logs-analyzer/logs-analyzer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logs-bugs-reporter/logs-bugs-assigner-mail-provider/logs-bugs-assigner-mail-provider.iml" filepath="$PROJECT_DIR$/logs-bugs-reporter/logs-bugs-assigner-mail-provider/logs-bugs-assigner-mail-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logs-bugs-reporter/logs-bugs-email-notifier/logs-bugs-email-notifier.iml" filepath="$PROJECT_DIR$/logs-bugs-reporter/logs-bugs-email-notifier/logs-bugs-email-notifier.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logs-bugs-reporter/logs-bugs-email-provider/logs-bugs-email-provider.iml" filepath="$PROJECT_DIR$/logs-bugs-reporter/logs-bugs-email-provider/logs-bugs-email-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logs-bugs-reporter/logs-bugs-jpa-entities/logs-bugs-jpa-entities.iml" filepath="$PROJECT_DIR$/logs-bugs-reporter/logs-bugs-jpa-entities/logs-bugs-jpa-entities.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logs-bugs-reporter/logs-bugs-mongo-document/logs-bugs-mongo-document.iml" filepath="$PROJECT_DIR$/logs-bugs-reporter/logs-bugs-mongo-document/logs-bugs-mongo-document.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logs-bugs-reporter/logs-bugs-openning/logs-bugs-openning.iml" filepath="$PROJECT_DIR$/logs-bugs-reporter/logs-bugs-openning/logs-bugs-openning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logs-bugs-reporter/logs-bugs-random/logs-bugs-random.iml" filepath="$PROJECT_DIR$/logs-bugs-reporter/logs-bugs-random/logs-bugs-random.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logs-bugs-reporter/logs-bugs-reporter.iml" filepath="$PROJECT_DIR$/logs-bugs-reporter/logs-bugs-reporter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logs-bugs-reporter/logs-bugs-reporter-back-office/logs-bugs-reporter-back-office.iml" filepath="$PROJECT_DIR$/logs-bugs-reporter/logs-bugs-reporter-back-office/logs-bugs-reporter-back-office.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logs-bugs-reporter/logs-db-populator/logs-db-populator.iml" filepath="$PROJECT_DIR$/logs-bugs-reporter/logs-db-populator/logs-db-populator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logs-bugs-reporter/logs-info-back-office/logs-info-back-office.iml" filepath="$PROJECT_DIR$/logs-bugs-reporter/logs-info-back-office/logs-info-back-office.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logs-bugs-reporter/logs-provider/logs-provider.iml" filepath="$PROJECT_DIR$/logs-bugs-reporter/logs-provider/logs-provider.iml" />
+    </modules>
+  </component>
+</project>
