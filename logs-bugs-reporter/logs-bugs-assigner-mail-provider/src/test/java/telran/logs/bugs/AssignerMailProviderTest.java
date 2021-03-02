@@ -10,13 +10,14 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 @SpringBootTest
 @AutoConfigureWebTestClient
 public class AssignerMailProviderTest {
-	@Autowired
-WebTestClient client;
-	@Value("${app-assigner-mail}")
-	String assignerMail;
-	@Test
-	void assignerMailTest() {
-		client.get().uri("/mail/assigner").exchange().expectStatus().isOk()
-		.expectBody(String.class).isEqualTo(assignerMail);
-	}
+    @Autowired
+    WebTestClient client;
+    @Value("${app-assigner-mail}")
+    String assignerMail;
+
+    @Test
+    void assignerMailTest() {
+        client.get().uri("/mail/assigner").exchange().expectStatus().isOk()
+                .expectBody(String.class).isEqualTo(assignerMail);
+    }
 }

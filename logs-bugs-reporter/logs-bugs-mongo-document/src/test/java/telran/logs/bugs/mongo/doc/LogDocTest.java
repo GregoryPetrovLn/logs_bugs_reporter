@@ -13,26 +13,27 @@ import org.springframework.boot.test.autoconfigure.data.mongo.AutoConfigureDataM
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import telran.logs.bugs.dto.LogDto;
-import telran.logs.bugs.dto.LogType;
+import telran.logs.bugs.dto.log.LogDto;
+import telran.logs.bugs.dto.enums.LogType;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes=LogsRepo.class)
-@EnableAutoConfiguration 
+@ContextConfiguration(classes = LogsRepo.class)
+@EnableAutoConfiguration
 @AutoConfigureDataMongo
 public class LogDocTest {
-@Autowired
-LogsRepo logs;
-@Test
-void docStoreTest() {
-	LogDto logDto = new LogDto(new Date(), LogType.NO_EXCEPTION, "artifact",
-			20, "result");
-	LogDto logDto1 = new LogDto(new Date(), LogType.NO_EXCEPTION, "artifact",
-			25, "result");
-	logs.save(new LogDoc(logDto)).block();
-	LogDoc actualDoc = logs.findAll().blockFirst() ;
-	assertNotEquals(logDto1, actualDoc.getLogDto());
-	assertEquals(logDto, actualDoc.getLogDto());
-	
-}
+    @Autowired
+    LogsRepo logs;
+
+    @Test
+    void docStoreTest() {
+        LogDto logDto = new LogDto(new Date(), LogType.NO_EXCEPTION, "artifact",
+                20, "result");
+        LogDto logDto1 = new LogDto(new Date(), LogType.NO_EXCEPTION, "artifact",
+                25, "result");
+        logs.save(new LogDoc(logDto)).block();
+        LogDoc actualDoc = logs.findAll().blockFirst();
+        assertNotEquals(logDto1, actualDoc.getLogDto());
+        assertEquals(logDto, actualDoc.getLogDto());
+
+    }
 }

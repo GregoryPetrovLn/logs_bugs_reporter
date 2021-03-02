@@ -14,18 +14,21 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 @AutoConfigureWebTestClient
 @AutoConfigureDataJpa
 public class EmailProviderTest {
-	@Autowired
-WebTestClient webClient;
-	@Test
-	@Sql("programmerArtifact.sql")
-	void emailExisting() {
-		webClient.get().uri("/email/artifact1")
-		.exchange().expectStatus().isOk().expectBody(String.class).isEqualTo("moshe@gmail.com");
-	}
-	@Test
-	@Sql("programmerArtifact.sql")
-	void emailNoExisting() {
-		webClient.get().uri("/email/artfact1")
-		.exchange().expectStatus().isOk().expectBody(String.class).isEqualTo("");
-	}
+    private static final String CLASS_PATH_SQL = "classpath:programmerArtifact.sql";
+    @Autowired
+    WebTestClient webClient;
+
+    @Test
+    @Sql(scripts = CLASS_PATH_SQL)
+    void emailExisting() {
+        webClient.get().uri("/email/artifact1")
+                .exchange().expectStatus().isOk().expectBody(String.class).isEqualTo("moshe@gmail.com");
+    }
+
+    @Test
+    @Sql(scripts = CLASS_PATH_SQL)
+    void emailNoExisting() {
+        webClient.get().uri("/email/artfact1")
+                .exchange().expectStatus().isOk().expectBody(String.class).isEqualTo("");
+    }
 }

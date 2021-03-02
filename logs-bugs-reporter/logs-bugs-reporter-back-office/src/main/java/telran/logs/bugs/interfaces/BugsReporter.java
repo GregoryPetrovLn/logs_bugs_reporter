@@ -3,6 +3,10 @@ package telran.logs.bugs.interfaces;
 import java.util.List;
 
 import telran.logs.bugs.dto.*;
+import telran.logs.bugs.dto.artifact.ArtifactDto;
+import telran.logs.bugs.dto.bug.*;
+import telran.logs.bugs.dto.enums.Seriousness;
+import telran.logs.bugs.dto.programmer.ProgrammerDto;
 
 public interface BugsReporter {
 	String ASSIGNMENT_DESCRIPTION_TITLE = "\nAssignment Description: ";

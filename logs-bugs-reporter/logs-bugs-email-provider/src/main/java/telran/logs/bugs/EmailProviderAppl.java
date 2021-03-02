@@ -13,18 +13,19 @@ import telran.logs.bugs.repo.ArtifactRepository;
 @SpringBootApplication
 @RestController
 public class EmailProviderAppl {
-	@Autowired
-ArtifactRepository artifactRepository;
-	
-	public static void main(String[] args) {
-		SpringApplication.run(EmailProviderAppl.class, args);
+    @Autowired
+    ArtifactRepository artifactRepository;
 
-	}
-	@GetMapping("/email/{artifact}")
-	String getEmail(@PathVariable(name="artifact") String artifact) {
-		Artifact artifactEntity = artifactRepository.findById(artifact).orElse(null);
-		return artifactEntity == null ? "" : artifactEntity.getProgrammer().getEmail();
-		
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(EmailProviderAppl.class, args);
+
+    }
+
+    @GetMapping("/email/{artifact}")
+    String getEmail(@PathVariable(name = "artifact") String artifact) {
+        Artifact artifactEntity = artifactRepository.findById(artifact).orElse(null);
+        return artifactEntity == null ? "" : artifactEntity.getProgrammer().getEmail();
+
+    }
 
 }

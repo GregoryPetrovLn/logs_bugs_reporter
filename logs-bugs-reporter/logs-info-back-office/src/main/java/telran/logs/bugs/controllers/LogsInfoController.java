@@ -8,13 +8,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import telran.logs.bugs.dto.*;
+
 import static telran.logs.bugs.api.LogsInfoApi.*;
 
 import java.util.List;
 
 
+import telran.logs.bugs.dto.artifact.ArtifactCount;
+import telran.logs.bugs.dto.enums.LogType;
 import telran.logs.bugs.interfaces.LogsInfo;
+import telran.logs.bugs.dto.log.LogDto;
+import telran.logs.bugs.dto.log.LogTypeCount;
 
 @RestController
 

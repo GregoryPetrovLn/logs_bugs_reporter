@@ -8,7 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import telran.logs.bugs.random.*;
-import telran.logs.bugs.dto.LogDto;
+import telran.logs.bugs.dto.log.LogDto;
 
 @SpringBootApplication
 public class RandomLogsAppl {

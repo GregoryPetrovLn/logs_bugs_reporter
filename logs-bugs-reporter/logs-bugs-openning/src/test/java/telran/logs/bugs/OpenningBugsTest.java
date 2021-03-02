@@ -17,8 +17,12 @@ import org.springframework.context.annotation.Import;
 import org.springframework.messaging.support.GenericMessage;
 import org.springframework.test.context.jdbc.Sql;
 
-import telran.logs.bugs.dto.*;
+import telran.logs.bugs.dto.enums.BugStatus;
+import telran.logs.bugs.dto.enums.LogType;
+import telran.logs.bugs.dto.enums.OpenningMethod;
+import telran.logs.bugs.dto.enums.Seriousness;
 import telran.logs.bugs.jpa.entities.*;
+import telran.logs.bugs.dto.log.LogDto;
 import telran.logs.bugs.repo.*;
 
 @SpringBootTest

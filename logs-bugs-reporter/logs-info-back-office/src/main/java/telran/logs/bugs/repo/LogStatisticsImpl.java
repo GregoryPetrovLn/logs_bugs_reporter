@@ -10,9 +10,9 @@ import org.springframework.data.mongodb.core.aggregation.*;
 import org.springframework.data.mongodb.core.query.Criteria;
 
 import reactor.core.publisher.Flux;
-import telran.logs.bugs.dto.ArtifactCount;
-import telran.logs.bugs.dto.LogType;
-import telran.logs.bugs.dto.LogTypeCount;
+import telran.logs.bugs.dto.artifact.ArtifactCount;
+import telran.logs.bugs.dto.enums.LogType;
+import telran.logs.bugs.dto.log.LogTypeCount;
 import telran.logs.bugs.mongo.doc.LogDoc;
 
 public class LogStatisticsImpl implements LogStatistics {
