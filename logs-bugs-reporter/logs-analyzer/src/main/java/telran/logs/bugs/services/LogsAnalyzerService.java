@@ -27,31 +27,32 @@ public class LogsAnalyzerService {
 	@Value("${app-logs-provider-artifact:logs-provider}")
 	String logsProviderArtifact;
 	@Autowired
-StreamBridge streamBridge;
+	StreamBridge streamBridge;
 	@Autowired
 	Validator validator;
+
 	@Bean
 	Consumer<LogDto> getAnalyzerBean() {
 		return this::analyzerMethod;
 	}
+
 	void analyzerMethod(LogDto logDto) {
 		LOG.debug("recievd log {}", logDto);
 		Set<ConstraintViolation<LogDto>> violations = validator.validate(logDto);
 		final LogDto logForEach = logDto;
-		 if (!violations.isEmpty()) {
-			violations.forEach(cv -> LOG.error("logDto : {}; field: {}; message: {}",logForEach,
-					cv.getPropertyPath(), cv.getMessage()));
-			logDto = new LogDto(new Date(),
-					LogType.BAD_REQUEST_EXCEPTION, logsProviderArtifact, 0, violations.toString());
-			
-			
-		 }
-		 if(logDto.logType != LogType.NO_EXCEPTION) {
-			 streamBridge.send(bindingNameExceptions, logDto);
-				LOG.debug("log: {} sent to binding name: {}", logDto, bindingNameExceptions);
-		 }
-		 
+		if (!violations.isEmpty()) {
+			violations.forEach(cv -> LOG.error("logDto : {}; field: {}; message: {}", logForEach, cv.getPropertyPath(),
+					cv.getMessage()));
+			logDto = new LogDto(new Date(), LogType.BAD_REQUEST_EXCEPTION, logsProviderArtifact, 0,
+					violations.toString());
+
+		}
+		if (logDto.logType != LogType.NO_EXCEPTION) {
+			streamBridge.send(bindingNameExceptions, logDto);
+			LOG.debug("log: {} sent to binding name: {}", logDto, bindingNameExceptions);
+		}
+
 		streamBridge.send(bindingNameLogs, logDto);
-		
+
 	}
 }

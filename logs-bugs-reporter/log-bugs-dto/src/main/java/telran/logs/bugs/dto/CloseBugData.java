@@ -11,8 +11,9 @@ public class CloseBugData {
 		this.dateClose = dateClose;
 		this.description = description;
 	}
+
 	@Min(1)
-public long bugId;
-public LocalDate dateClose;
-public String description;
+	public long bugId;
+	public LocalDate dateClose;
+	public String description;
 }

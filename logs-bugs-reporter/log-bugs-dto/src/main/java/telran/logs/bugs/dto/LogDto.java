@@ -14,6 +14,7 @@ public class LogDto {
 		this.responseTime = responseTime;
 		this.result = result;
 	}
+
 	@NotNull
 	public Date dateTime;
 	@NotNull
@@ -22,6 +23,7 @@ public class LogDto {
 	public String artifact;
 	public int responseTime;
 	public String result;
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -33,6 +35,7 @@ public class LogDto {
 		result = prime * result + ((this.result == null) ? 0 : this.result.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -63,12 +66,11 @@ public class LogDto {
 			return false;
 		return true;
 	}
+
 	@Override
 	public String toString() {
 		return "LogDto [dateTime=" + dateTime + ", logType=" + logType + ", artifact=" + artifact + ", responseTime="
 				+ responseTime + ", result=" + result + "]";
 	}
-	
-	
 
 }

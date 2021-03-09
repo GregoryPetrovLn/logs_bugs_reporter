@@ -11,17 +11,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AssignerMailProviderAppl {
 	static Logger LOG = LoggerFactory.getLogger(AssignerMailProviderAppl.class);
-	@Value("${app-assigner-mail:logs.bugs.reporter+assigner@gmail.com}")
-String assignerMail;
+	@Value("${app-assigner-mail:grishap96123+assigner@gmail.com}")
+	String assignerMail;
+
 	public static void main(String[] args) {
 		SpringApplication.run(AssignerMailProviderAppl.class, args);
 
 	}
+
 	@GetMapping("/mail/assigner")
 	String getAssignerMail() {
 		LOG.debug("assigner mail is {}", assignerMail);
 		return assignerMail;
 	}
-	
 
 }

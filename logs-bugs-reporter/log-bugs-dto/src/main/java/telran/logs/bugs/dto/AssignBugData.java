@@ -9,9 +9,10 @@ public class AssignBugData {
 		this.programmerId = programmerId;
 		this.description = description;
 	}
+
 	@Min(1)
-public long bugId;
+	public long bugId;
 	@Min(1)
-public long programmerId;
-public 	String description;
+	public long programmerId;
+	public String description;
 }

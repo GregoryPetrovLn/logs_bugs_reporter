@@ -1,6 +1,5 @@
 package telran.logs.bugs.controllers;
 
-
 import javax.validation.ConstraintViolationException;
 
 import org.slf4j.*;
@@ -20,10 +19,11 @@ import telran.logs.bugs.exceptions.NotFoundException;
 @RestControllerAdvice
 public class GlobalExceptionsController {
 	static Logger LOG = LoggerFactory.getLogger(GlobalExceptionsController.class);
+
 	@ExceptionHandler(ConstraintViolationException.class)
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
-String constraintViolationHandler(ConstraintViolationException e) {
-	return processingExceptions(e);
+	String constraintViolationHandler(ConstraintViolationException e) {
+		return processingExceptions(e);
 	}
 
 	@ExceptionHandler(DuplicatedException.class)
@@ -31,16 +31,15 @@ String constraintViolationHandler(ConstraintViolationException e) {
 	String duplicatedKeyHandler(DuplicatedException e) {
 		return processingExceptions(e);
 	}
+
 	@ExceptionHandler(NotFoundException.class)
 	@ResponseStatus(HttpStatus.NOT_FOUND)
 	String notFounHandler(NotFoundException e) {
 		return processingExceptions(e);
 	}
-	
-	
 
-private String processingExceptions(Exception e) {
-	LOG.error("exception class: {}, message: {}", e.getClass().getSimpleName(), e.getMessage());
-	return e.getMessage();
-}
+	private String processingExceptions(Exception e) {
+		LOG.error("exception class: {}, message: {}", e.getClass().getSimpleName(), e.getMessage());
+		return e.getMessage();
+	}
 }

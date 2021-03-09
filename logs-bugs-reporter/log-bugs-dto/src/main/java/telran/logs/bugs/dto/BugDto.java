@@ -14,10 +14,10 @@ public class BugDto {
 	}
 
 	@NotNull
-public Seriousness seriousness;
+	public Seriousness seriousness;
 	@NotEmpty
 	public String description;
-	
+
 	public LocalDate dateOpen;
 
 	@Override

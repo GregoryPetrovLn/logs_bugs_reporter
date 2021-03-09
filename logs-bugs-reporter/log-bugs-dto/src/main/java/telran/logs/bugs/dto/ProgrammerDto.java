@@ -11,16 +11,19 @@ public class ProgrammerDto {
 		this.name = name;
 		this.email = email;
 	}
+
 	@Min(1)
-public long id;
+	public long id;
 	@NotEmpty
-public String name;
+	public String name;
 	@Email
-public String email;
+	public String email;
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(email, id, name);
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

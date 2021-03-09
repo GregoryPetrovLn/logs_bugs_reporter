@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="logs-analyzer" />
+        <module name="logs-bugs-random" />
+        <module name="logs-bugs-openning" />
+        <module name="logs-bugs-email-notifier" />
+        <module name="logs-db-populator" />
+        <module name="logs-bugs-assigner-mail-provider" />
+        <module name="logs-info-back-office" />
+        <module name="logs-bugs-mongo-document" />
+        <module name="log-bugs-dto" />
+        <module name="logs-provider" />
+        <module name="logs-bugs-reporter-back-office" />
+        <module name="logs-bugs-email-provider" />
+        <module name="logs-bugs-jpa-entities" />
+        <module name="logs-bugs-exceptions-handler" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="log-bugs-dto" target="11" />
+      <module name="logs-analyzer" target="11" />
+      <module name="logs-bugs-assigner-mail-provider" target="11" />
+      <module name="logs-bugs-email-notifier" target="11" />
+      <module name="logs-bugs-email-provider" target="11" />
+      <module name="logs-bugs-exceptions-handler" target="11" />
+      <module name="logs-bugs-jpa-entities" target="11" />
+      <module name="logs-bugs-mongo-document" target="11" />
+      <module name="logs-bugs-openning" target="11" />
+      <module name="logs-bugs-random" target="11" />
+      <module name="logs-bugs-reporter" target="11" />
+      <module name="logs-bugs-reporter-back-office" target="11" />
+      <module name="logs-db-populator" target="11" />
+      <module name="logs-info-back-office" target="11" />
+      <module name="logs-provider" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="log-bugs-dto" options="-parameters" />
+      <module name="logs-analyzer" options="-parameters" />
+      <module name="logs-bugs-assigner-mail-provider" options="-parameters" />
+      <module name="logs-bugs-email-notifier" options="-parameters" />
+      <module name="logs-bugs-email-provider" options="-parameters" />
+      <module name="logs-bugs-exceptions-handler" options="-parameters" />
+      <module name="logs-bugs-jpa-entities" options="-parameters" />
+      <module name="logs-bugs-mongo-document" options="-parameters" />
+      <module name="logs-bugs-openning" options="-parameters" />
+      <module name="logs-bugs-random" options="-parameters" />
+      <module name="logs-bugs-reporter-back-office" options="-parameters" />
+      <module name="logs-db-populator" options="-parameters" />
+      <module name="logs-info-back-office" options="-parameters" />
+      <module name="logs-provider" options="-parameters" />
+    </option>
+  </component>
+</project>

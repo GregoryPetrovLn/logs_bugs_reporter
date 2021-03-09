@@ -2,7 +2,6 @@ package telran.logs.bugs;
 
 import java.util.function.Consumer;
 
-
 import org.slf4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -22,9 +21,6 @@ public class LogsDbPopulatorAppl {
 
 	}
 
-	
-	
-
 	@Bean
 
 	Consumer<LogDto> getLogDtoConsumer() {
@@ -38,7 +34,8 @@ public class LogsDbPopulatorAppl {
 		// taking and saving to MongoDB logDto
 		LOG.debug("received log: {}", logDto);
 
-		logsRepository.save(new LogDoc(logDto)).subscribe(log -> LOG.debug("log: {} saved to Mongo collection", log.getLogDto()));
+		logsRepository.save(new LogDoc(logDto))
+				.subscribe(log -> LOG.debug("log: {} saved to Mongo collection", log.getLogDto()));
 		LOG.debug("start saving log and finishing of takeAndSaveLogDto method");
 
 	}

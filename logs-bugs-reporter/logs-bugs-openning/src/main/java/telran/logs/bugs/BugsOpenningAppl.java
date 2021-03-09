@@ -10,7 +10,6 @@ public class BugsOpenningAppl {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BugsOpenningAppl.class, args);
-
 	}
 
 }

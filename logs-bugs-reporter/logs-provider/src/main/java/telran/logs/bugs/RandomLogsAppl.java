@@ -13,16 +13,19 @@ import telran.logs.bugs.dto.LogDto;
 @SpringBootApplication
 public class RandomLogsAppl {
 	static Logger LOG = LoggerFactory.getLogger(RandomLogsAppl.class);
-@Autowired
-RandomLogs randomLogs;
+	@Autowired
+	RandomLogs randomLogs;
+
 	public static void main(String[] args) {
 		SpringApplication.run(RandomLogsAppl.class, args);
 
 	}
+
 	@Bean
-Supplier<LogDto>  random_logs_provider() {
-	return this::sendRandomLog;
-}
+	Supplier<LogDto> random_logs_provider() {
+		return this::sendRandomLog;
+	}
+
 	LogDto sendRandomLog() {
 		LogDto logDto = randomLogs.createRandomLog();
 		LOG.debug("sent log: {}", logDto);
